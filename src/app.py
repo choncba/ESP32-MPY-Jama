@@ -1230,7 +1230,9 @@ class Application :
         self._webSrv.Start(threaded=True)
         webview.start( self._appRun,
                        localization = conf.PYWEBVIEW_LOCALIZATION,
-                       user_agent   = conf.APPLICATION_TITLE )
+                       user_agent   = conf.APPLICATION_TITLE,
+                       private_mode=False
+                       )
         self._appRunning = False
 
 # ============================================================================
